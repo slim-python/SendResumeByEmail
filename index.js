@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import indexRoute from "./routes/index.js";
+import SendResumeBot from "./utils/SendaResumebot.js";
 dotenv.config();
 
 const app = express();
@@ -22,3 +23,6 @@ app.listen(process.env.PORT, () => {
     console.log(`Error in connecting to server: ${error}`);
   }
 });
+
+//start the telegram bot
+SendResumeBot();

@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "nodemon", "index.js" ]
+CMD [ "nod", "index.js" ]
