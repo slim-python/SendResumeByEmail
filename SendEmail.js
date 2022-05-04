@@ -21,7 +21,7 @@ const SendResumeByEmail = async (to, from) => {
       text: " Hi, Here is my resume, have a good day !!",
       attachments: {
         filename: "Full-Stack-dev-Abhishek.pdf",
-        path: "https://drive.google.com/file/d/190HWPEoNXfs04lOR381oGVc5TUFehQ8D/view?usp=sharing",
+        path: "https://nbviewer.org/github/slim-python/test/blob/main/Full%20stack%20dev%20abhishek.pdf",
       },
     };
     transporter
