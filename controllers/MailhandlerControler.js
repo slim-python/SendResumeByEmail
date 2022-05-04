@@ -14,5 +14,4 @@ export const mailhandlerController = (req, res) => {
 
       res.json({ status: 200, message: JSON.parse(err) });
     });
-  console.log("working fine");
 };

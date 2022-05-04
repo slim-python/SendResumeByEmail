@@ -27,15 +27,24 @@ const SendResumeBot = () => {
     //btw stop reading and get me a job :(
     if (valid_email) {
       try {
-        axios.get(`${process.env.API}${mail}`).then((resp) => {
-          console.log(resp.data.status);
-          if (resp.data.status === 400) {
-            ctx.reply(`email has been sent to : \n${mail} Sucessfully ✨`);
-            ctx.reply(
-              `Don't worry, you'll get a Job soon.\ngood things take time ❤️`
-            );
-          }
-        });
+        axios
+          .get(`${process.env.API}${mail}`)
+          .then((resp) => {
+            if (resp.data.status === 400) {
+              ctx.reply(`email has been sent to : \n${mail} Sucessfully ✨`);
+              ctx.reply(
+                `Don't worry, you'll get a Job soon.\ngood things take time ❤️`
+              );
+            } else {
+              ctx.reply(resp.data);
+            }
+            ctx.reply(resp.data);
+          })
+          .catch((error) => {
+            console.log(error);
+            ctx.reply(`Couldn't send Email ✉️`);
+            ctx.reply(`Probably API is not wroking 😥`);
+          });
       } catch (error) {
         console.log(error);
       }
