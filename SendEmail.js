@@ -37,9 +37,6 @@ const SendResumeByEmail = async (to, from) => {
         reject(JSON.stringify({ status: "There was some problem" }));
       });
   });
-  // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(transporter));
 };
-
-// SendResumeByEmail("sahil.saini@stockdaddy.in").catch(console.error);
 
 export default SendResumeByEmail;
