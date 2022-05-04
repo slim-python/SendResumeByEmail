@@ -18,7 +18,7 @@ const SendResumeByEmail = async (to, from) => {
       from: `"Abhishek Kumar" <${process.env.EMAIL_ADDRESS}>`,
       to,
       subject: "Incquiry for Full stack developer",
-      text: " Hi, Here is my resume, have a good day !!",
+      text: " Hi, Here is my resume, have a good day ✨ !!",
       attachments: {
         filename: "Full-Stack-dev-Abhishek.pdf",
         path: process.env.RESUME,
