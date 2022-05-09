@@ -16,15 +16,15 @@ const SendResumeBot = () => {
   );
 
   bot.command("send", (ctx) => {
-    let mail = ctx.message.text;
+    let mail = null;
+    mail = ctx.message.text;
     mail = mail.split(" ");
     mail = mail[1];
 
     //check if email is valid
     const valid_email = validator.isEmail(mail);
 
-    //if email is valid then start the process
-    //btw stop reading and get me a job :(
+    // if email is valid then start the process
     if (valid_email) {
       try {
         axios
@@ -35,10 +35,7 @@ const SendResumeBot = () => {
               ctx.reply(
                 `Don't worry, you'll get a Job soon.\ngood things take time ❤️`
               );
-            } else {
-              ctx.reply(resp.data);
             }
-            ctx.reply(resp.data);
           })
           .catch((error) => {
             console.log(error);
