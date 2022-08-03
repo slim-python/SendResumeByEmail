@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import indexRoute from "./routes/index.js";
-import SendResumeBot from "./utils/SendaResumebot.js";
+import SendResumeBot from "./utils/SendResumebot.js";
 import rateLimit from "express-rate-limit";
 
 dotenv.config();
